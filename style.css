@@ -409,9 +409,6 @@ section{
 }
 
 /* Styling Untuk Menu Kontak */
-.contact{
-    background-color: var(--second-bg-color);
-}
 .contact h2{
     margin-bottom: 3rem;
     font-size: 8rem;
