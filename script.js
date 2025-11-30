@@ -2,11 +2,21 @@ const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('.navbar');
 const header = document.querySelector('.header');
 
+// Toggle mobile menu
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
 
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
+// Form validation
 function validateForm(event) {
     event.preventDefault(); 
 
@@ -23,8 +33,8 @@ function validateForm(event) {
     return false; 
 }
 
+// Scroll to top button
 let mybutton = document.getElementById("myBtn");
-// Saat menggulir ke bawah 20 piksel dari atas dokumen, tampilkan tombolnya
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -35,7 +45,6 @@ function scrollFunction() {
   }
 }
 
-// Tambahkan fungsi ini untuk mengatur scroll ke atas
 function topFunction() {
   document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0;
@@ -70,14 +79,25 @@ function typeWriter() {
     }
 }
 
-// Mulai animasi setelah halaman dimuat
-window.addEventListener('load', () => {
-    setTimeout(typeWriter, 500);
-});
-
 // Animasi Scroll untuk Section
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
+const skillItems = document.querySelectorAll('.skill-item');
+const progressBars = document.querySelectorAll('.progress-bar');
+const galeriBoxes = document.querySelectorAll('.galeri-box');
+const formInputs = document.querySelectorAll('.contact form input, .contact form textarea');
+
+// Skill levels data
+const skillLevels = {
+    html: 90,
+    css: 85,
+    js: 75,
+    tailwind: 80,
+    bootstrap: 85,
+    php: 70,
+    laravel: 65,
+    mysql: 75
+};
 
 // Fungsi untuk menangani scroll
 function handleScroll() {
@@ -98,19 +118,27 @@ function handleScroll() {
         if (sectionTop < windowHeight * 0.8 && sectionBottom > 0) {
             section.classList.add('visible');
             
-            // Animasi untuk elemen skill-item
+            // Animasi untuk skill items
             if (section.id === 'skil') {
-                const skillItems = section.querySelectorAll('.skill-item');
                 skillItems.forEach((item, index) => {
                     setTimeout(() => {
                         item.classList.add('visible');
                     }, index * 100);
                 });
+                
+                // Animate progress bars
+                progressBars.forEach(bar => {
+                    const skill = bar.getAttribute('data-skill');
+                    if (skillLevels[skill]) {
+                        setTimeout(() => {
+                            bar.style.width = `${skillLevels[skill]}%`;
+                        }, 500);
+                    }
+                });
             }
             
-            // Animasi untuk galeri-box
+            // Animasi untuk galeri boxes
             if (section.id === 'galeri') {
-                const galeriBoxes = section.querySelectorAll('.galeri-box');
                 galeriBoxes.forEach((box, index) => {
                     setTimeout(() => {
                         box.classList.add('visible');
@@ -118,10 +146,9 @@ function handleScroll() {
                 });
             }
             
-            // Animasi untuk form input
+            // Animasi untuk form inputs
             if (section.id === 'contact') {
-                const inputs = section.querySelectorAll('input, textarea');
-                inputs.forEach((input, index) => {
+                formInputs.forEach((input, index) => {
                     setTimeout(() => {
                         input.classList.add('visible');
                     }, index * 200);
@@ -152,4 +179,33 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 // Jalankan sekali saat halaman dimuat untuk menampilkan section yang sudah terlihat
-window.addEventListener('load', handleScroll);
+window.addEventListener('load', () => {
+    setTimeout(typeWriter, 500);
+    handleScroll();
+});
+
+// Tambahkan efek hover pada skill items
+skillItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.transform = 'translateY(-10px)';
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        if (!item.classList.contains('visible')) return;
+        item.style.transform = 'translateY(0)';
+    });
+});
+
+// Tambahkan smooth scrolling untuk semua anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});

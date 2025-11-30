@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hapitt.</title>
+    <title>Hapitt - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="img/jpg" href="./img/icon.jpeg">
-    <!-- Link Box icon-->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
-    <!-- Link Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,6 +16,13 @@
 </head>
 
 <body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+        <div class="bg-circle circle-4"></div>
+    </div>
 
     <!-- Header For Logo -->
     <header class="header">
@@ -36,26 +39,26 @@
             <a href="#galeri" class="nav-link">Project</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
-
     </header>
 
     <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, It's <span>Hapitt</span></h1>
-            <!-- Text Animation -->
-            <h3 class="text-animation">
-                I'm a <span></span>
-            </h3>
-            <!-- Batas Text Animation -->
+            <div class="intro-text">
+                <h1>Hi, It's <span>Hapitt</span></h1>
+                <h3 class="text-animation">
+                    I'm a <span></span>
+                </h3>
+            </div>
 
-            <p>Hai Semuanya,Selamat Datang di Website Portofolio saya.Perkenalkan Saya Muhammad Hafidz Akshan.Kelas XI
-                RPL 1 Di SMKN 1 Majalengka.</p>
-            <p>Jl.Raya Tonjong No.55.Pinangraja.Majalengka, Jawa Barat.</p>
+            <div class="home-desc">
+                <p>Hai Semuanya, Selamat Datang di Website Portofolio saya. Perkenalkan Saya Muhammad Hafidz Akshan.
+                    Kelas XI RPL 1 Di SMKN 1 Majalengka.</p>
+                <p>Jl. Raya Tonjong No.55. Pinangraja. Majalengka, Jawa Barat.</p>
+            </div>
 
             <!-- Social Icons -->
             <div class="social-icons">
-                <!-- Menuju Link Asli Ketika Di Klik -->
                 <a href="https://github.com/Hapitt" target="_blank">
                     <i class='bx bxl-github'></i>
                 </a>
@@ -71,184 +74,306 @@
                 </a>
             </div>
 
-            <!-- Formalitas  -->
+            <!-- CTA Buttons -->
             <div class="btn-group">
-                <a href="#about" class="btn">Me</a>
-                <a href="#contact" class="btn">Contact</a>
+                <a href="#about" class="btn secondary">
+                    About Me
+                    <i class='bx bx-user'></i>
+                </a>
+                <a href="#contact" class="btn secondary">
+                    Contact
+                    <i class='bx bx-message-dots'></i>
+                </a>
             </div>
-
         </div>
 
         <!-- Gambar Untuk Bagian Home-->
         <div class="home-img">
-            <img src="./img/Profile-home.jpg" alt="">
+            <div class="img-container">
+                <img src="./img/Profile-home.jpg" alt="Hapitt Profile">
+                <div class="img-glow"></div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="./img/about1.jpg" alt="">
+            <div class="img-container">
+                <img src="./img/about1.jpg" alt="About Hapitt">
+                <div class="img-glow"></div>
+            </div>
         </div>
 
         <div class="about-content">
-            <h2>About <span> Hapitt. </span></h2>
-            <p>Muhammad Hafidz Akshan XI RPL 1 Di SMKN 1 Majalengka.Biasa dipanggil Hapitt . Kelahiran 6 September 2007
-                . Asli Orang Majalengka Namun pindah Pada Saat Masih Kecil Ke Tangerang . Pindah Lagi Ke Majalengka
-                Kelas 4 SD Dan Kesulitan Bersosialisasi Dengan Lingkungan , Dikarenakan Faktor Bahasa . Hobinya Main
-                Mobile Legend Di Kamar , Yang Mau Mabar Gassken Nick ML : Hapitt.</p>
-            <a href="#about" class="btn">Read More</a>
+            <h2>About <span>Hapitt.</span></h2>
+            <div class="about-desc">
+                <p>Muhammad Hafidz Akshan XI RPL 1 Di SMKN 1 Majalengka. Biasa dipanggil Hapitt. Kelahiran 6 September
+                    2007. Asli Orang Majalengka Namun pindah Pada Saat Masih Kecil Ke Tangerang. Pindah Lagi Ke
+                    Majalengka Kelas 4 SD Dan Kesulitan Bersosialisasi Dengan Lingkungan, Dikarenakan Faktor Bahasa.
+                    Hobinya Main Mobile Legend Di Kamar, Yang Mau Mabar Gassken Nick ML : Hapitt.</p>
+            </div>
+            <a href="#about" class="btn">
+                Salam Kenal
+            </a>
         </div>
     </section>
 
     <!-- Skil Section -->
     <section class="skil" id="skil">
-        <h2 class="heading">Skill</h2>
+        <h2 class="heading">Skills</h2>
 
         <div class="skills-container">
             <div class="skill-item">
-                <i class='bx bxl-html5 html5-icon'></i>
+                <div class="skill-icon">
+                    <i class='bx bxl-html5'></i>
+                </div>
                 <span>HTML5</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="html"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <i class='bx bxl-css3 css3-icon'></i>
+                <div class="skill-icon">
+                    <i class='bx bxl-css3'></i>
+                </div>
                 <span>CSS3</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="css"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <i class='bx bxl-javascript javascript-icon'></i>
+                <div class="skill-icon">
+                    <i class='bx bxl-javascript'></i>
+                </div>
                 <span>JavaScript</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="js"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <img src="./img/tailwind.png" alt="Tailwind CSS" onerror="this.style.display='none'">
+                <div class="skill-icon">
+                    <img src="./img/tailwind.png" alt="Tailwind CSS">
+                </div>
                 <span>Tailwind</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="tailwind"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <i class='bx bxl-bootstrap bootstrap-icon'></i>
+                <div class="skill-icon">
+                    <i class='bx bxl-bootstrap'></i>
+                </div>
                 <span>Bootstrap</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="bootstrap"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <i class='bx bxl-php php-icon'></i>
+                <div class="skill-icon">
+                    <i class='bx bxl-php'></i>
+                </div>
                 <span>PHP</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="php"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <img src="./img/laravel.png" alt="Laravel" onerror="this.style.display='none'">
+                <div class="skill-icon">
+                    <img src="./img/laravel.png" alt="Laravel">
+                </div>
                 <span>Laravel</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="laravel"></div>
+                </div>
             </div>
             <div class="skill-item">
-                <img src="./img/mysql.png" alt="MySQL" onerror="this.style.display='none'">
+                <div class="skill-icon">
+                    <img src="./img/mysql.png" alt="MySQL">
+                </div>
                 <span>MySQL</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-skill="mysql"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Galeri Section -->
     <section class="galeri" id="galeri">
-        <h2 class="heading">My <span> Project</span></h2>
+        <h2 class="heading">My <span>Projects</span></h2>
 
         <div class="galeri-container">
             <div class="galeri-box">
-                <a href="./img/project1.png">
+                <div class="project-img">
                     <img src="./img/project1.png" alt="Project 1">
-                </a>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Project 1</h3>
+                            <p>Web Development</p>
+                            <a href="./img/project1.png" class="project-link" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="galeri-box">
-                <a href="./img/project2.png">
+                <div class="project-img">
                     <img src="./img/project2.png" alt="Project 2">
-                </a>
-
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Project 2</h3>
+                            <p>Web Design</p>
+                            <a href="./img/project2.png" class="project-link" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="galeri-box">
-                <a href="./img/project4.png">
+                <div class="project-img">
                     <img src="./img/project4.png" alt="Project 3">
-                </a>
-
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Project 3</h3>
+                            <p>UI/UX Design</p>
+                            <a href="./img/project4.png" class="project-link" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="galeri-box">
-                <a href="./img/galeri3.jpg">
+                <div class="project-img">
                     <img src="./img/galeri3.jpg" alt="Project 4">
-                </a>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Project 4</h3>
+                            <p>Mobile App</p>
+                            <a href="./img/galeri3.jpg" class="project-link" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="galeri-box">
-                <a href="./img/galeri1.jpg">
+                <div class="project-img">
                     <img src="./img/galeri1.jpg" alt="Project 5">
-                </a>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Project 5</h3>
+                            <p>Graphic Design</p>
+                            <a href="./img/galeri1.jpg" class="project-link" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="galeri-box">
-                <a href="./img/project5.png">
+                <div class="project-img">
                     <img src="./img/project5.png" alt="Project 6">
-                </a>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Project 6</h3>
+                            <p>Full Stack</p>
+                            <a href="./img/project5.png" class="project-link" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span> Me</span></h2>
+        <h2 class="heading">Contact <span>Me</span></h2>
 
         <form id="contactForm" onsubmit="return validateForm(event)">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" id="name" placeholder="Nama" required>
-                    <input type="email" id="Email" placeholder="Email" required>
-                    <input type="number" id="phone" placeholder="Phone Number" required>
-
+                    <div class="input-field">
+                        <input type="text" id="name" placeholder="Nama" required>
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="Email" placeholder="Email" required>
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="number" id="phone" placeholder="Phone Number" required>
+                        <i class='bx bx-phone'></i>
+                    </div>
                 </div>
             </div>
 
             <div class="input-group-2">
-                <textarea id="message" cols="30" rows="10" placeholder="Isi Pesan" required></textarea>
-                <input type="submit" value="Kirim Pesan" class="btn">
+                <div class="textarea-field">
+                    <textarea id="message" cols="30" rows="10" placeholder="Isi Pesan" required></textarea>
+                    <i class='bx bx-message-dots'></i>
+                </div>
+                <button type="submit" class="btn submit-btn">
+                    <span>Kirim Pesan</span>
+                    <i class='bx bx-send'></i>
+                </button>
             </div>
         </form>
-
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://github.com/Hapitt" target="_blank">
-                <i class='bx bxl-github'></i>
-            </a>
-            <a href="https://www.linkedin.com/in/m-hafidz-akshan-0042b2329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank">
-                <i class='bx bxl-linkedin-square'></i>
-            </a>
-            <a href="https://www.instagram.com/_hapitt/" target="_blank">
-                <i class='bx bxl-instagram-alt'></i>
-            </a>
-            <a href="https://www.youtube.com/@hafidzeditz8625" target="_blank">
-                <i class='bx bxl-youtube'></i>
-            </a>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://github.com/Hapitt" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/m-hafidz-akshan-0042b2329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank">
+                    <i class='bx bxl-linkedin-square'></i>
+                </a>
+                <a href="https://www.instagram.com/_hapitt/" target="_blank">
+                    <i class='bx bxl-instagram-alt'></i>
+                </a>
+                <a href="https://www.youtube.com/@hafidzeditz8625" target="_blank">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#skil">Skills</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                © Muhammad Hapitt | All Rights Reserved
+            </p>
         </div>
 
-        <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
-
-
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href="#skil">Skil</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-
-        <p class="copyright">
-            © Muhammad Hapitt | All Rights Reserved
-        </p>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class='bx bx-chevron-up'></i>
+        </button>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
