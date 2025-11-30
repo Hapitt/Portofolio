@@ -38,7 +38,7 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 100) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
